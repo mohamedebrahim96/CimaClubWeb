@@ -1,10 +1,13 @@
 <?php 
-$string = file_get_contents('./string.json');
+header('Content-Type: application/json');
 
-$string = "Hellow rosld";
-$json = json_decode($string);
+$foo = new StdClass();
+$foo->versioncode = 1;
+$foo->versionname = "1.0";
+$foo->massage = "new update and add more featurs -fix bugs";
+
+
+$json = json_encode($foo);
 echo $json;
-
-
 
 ?> 
